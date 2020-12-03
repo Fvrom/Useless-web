@@ -21,12 +21,23 @@ button_one.addEventListener('click', function (event) {
 
 
     else {
-    button_one.innerHTML = "Are you insane?!";   
+        button_one.innerHTML = "You are making a mistake!";   
+
 } 
 
 console.log(clickCounter); 
 
 })
 
+/* denna kod funakr ej ännu */ 
+if (clickCounter === 4) {
+    
+function hideButtonOne() {
+    if (button_one.style.display === "block") {
+        button_one.style.display === "none"; 
+    }
+} 
+
+}
 
 
