@@ -21,7 +21,7 @@ button_one.addEventListener('click', function (event) {
 
 
     else {
-        button_one.innerHTML = "You are making a mistake!";   
+        revealButton(); 
 
 } 
 
@@ -29,15 +29,38 @@ console.log(clickCounter);
 
 })
 
-/* denna kod funakr ej ännu */ 
-if (clickCounter === 4) {
+/* Function for hiding first button and revealing a second one */ 
+
+const firstHiddenButton = document.querySelector(".reveal-first-hidden-button");
+const hiddenDiv = document.querySelector(".hidden-div"); 
     
-function hideButtonOne() {
-    if (button_one.style.display === "block") {
-        button_one.style.display === "none"; 
+function revealButton() {
+    if ( firstHiddenButton.classList.contains("reveal")) {
+        hiddenDiv.classList.remove("reveal"); 
+    }
+    else {
+        hiddenDiv.classList.add("reveal");
+         button_one.classList.add("hidden");
     }
 } 
 
-}
+const sectionOne = document.querySelector(".section-one");
+const hiddenSectionOne = document.querySelector(".section-one.hidden");
 
+firstHiddenButton.addEventListener('click', function (event) {
 
+    clickCounter++ 
+
+    if (clickCounter === 4 ) {
+        sectionOne.classList.add("hidden");
+    }
+
+}) 
+
+// Funktion gömma knapp, reveal en annan knapp.
+// "släcka ljuset", reveal hide section-one black background? 
+// Scroll funktion
+// Gömma knappen bland massa cirklar. 
+// Scrolla uoo igen när man trycker på knappen. 
+// "Seriously, don't press this button. "
+// Jump-scare
