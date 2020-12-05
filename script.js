@@ -32,8 +32,16 @@ console.log(clickCounter);
 /* Function for hiding first button and revealing a second one */ 
 
 const firstHiddenButton = document.querySelector(".reveal-first-hidden-button");
-const hiddenDiv = document.querySelector(".hidden-div"); 
-    
+const hiddenDiv = document.querySelector(".hidden-div-one"); 
+
+
+const sectionOne = document.querySelector(".section-one");
+const hiddenSectionOne = document.querySelector(".section-one.hidden");
+const dialogWrapper = document.querySelector(".dialog-wrapper.hidden")
+  
+
+
+/* Functions */ 
 function revealButton() {
     if ( firstHiddenButton.classList.contains("reveal")) {
         hiddenDiv.classList.remove("reveal"); 
@@ -44,8 +52,20 @@ function revealButton() {
     }
 } 
 
-const sectionOne = document.querySelector(".section-one");
-const hiddenSectionOne = document.querySelector(".section-one.hidden");
+function revealDialog () {
+    if (dialogWrapper.contains("hidden")) {
+        dialogWrapper.remove("hidden"); 
+    }
+    else {
+        dialogWrapper.remove("hidden");
+    }
+
+}
+
+/* End of functions */ 
+
+
+
 
 firstHiddenButton.addEventListener('click', function (event) {
 
@@ -53,9 +73,23 @@ firstHiddenButton.addEventListener('click', function (event) {
 
     if (clickCounter === 4 ) {
         sectionOne.classList.add("hidden");
+
+        revealDialog(); 
     }
 
 }) 
+
+
+
+/* Verkar inte fungera med reveal av dialog */ 
+    
+
+/* 
+const dialog = document.createElement("p"); 
+dialog.innerHTML = "NoOoo! Turn the lights back on!" ; 
+document.dialogWrapper.appendChild(dialog); 
+console.log (dialog); */ 
+
 
 // Funktion gömma knapp, reveal en annan knapp.
 // "släcka ljuset", reveal hide section-one black background? 
