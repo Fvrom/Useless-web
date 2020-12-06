@@ -17,6 +17,14 @@
     height: 100vh;
     z-index: 1;
 }
+/* .flexible-column .two{
+    background-color: rgb(96, 106, 199);
+    width: 10%;
+    flex-grow: 1;
+    height: 100vh;
+    z-index: 1;
+} */ 
+
 
 body {
     display: flex;
@@ -27,7 +35,7 @@ body {
 }
 
 .section {
-    
+   
     height: 100vh;
     width: 100%;
    
@@ -64,6 +72,8 @@ main {
     display: none;
 }
 
+
+/* Reveals the second button after first buttan has been pressed */ 
 .reveal-first-hidden-button {
     margin: 4.5rem;
     height: 12rem;
@@ -89,23 +99,23 @@ main {
     display: block; 
 }
 
-
+/* End of first hidden button */ 
 
 /* dialog - Jobbar på denna del!! Verkar inte fungera i js*/ 
 
-.dialog-wrapper.hidden {
+.hidden-dialog-wrapper {
     display: none;
 }
 
 
-.dialog-wrapper {
-   display: block; 
-    position: absolute;
+.hidden-dialog-wrapper.reveal {
+    display: block;
+    
     background: whitesmoke; 
     height: 6rem;
     width: 15rem; 
    
-    margin-top: 5rem;
+    margin: 15rem;
     border-radius: 1rem;
 
    
@@ -126,3 +136,28 @@ main {
     height: 4rem;
     width: 10rem; 
 } */ 
+
+.reveal-second-hidden-button {
+    margin: 4.5rem;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    font-family: AmaticSC-Bold;
+    font-size: 2.6rem;
+    text-decoration: none;
+    outline: 0;  /* removes outline when you press the button */ 
+
+    background: rgb(218, 40, 40); 
+    border: 2px solid #b12222;
+    box-shadow: 2px 2px 5px rgb(39, 39, 39);
+
+    
+}
+
+.hidden-div-two {
+    display: none; 
+}
+
+.hidden-div-two.reveal {
+    display: block; 
+}

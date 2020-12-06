@@ -37,30 +37,34 @@ const hiddenDiv = document.querySelector(".hidden-div-one");
 
 const sectionOne = document.querySelector(".section-one");
 const hiddenSectionOne = document.querySelector(".section-one.hidden");
-const dialogWrapper = document.querySelector(".dialog-wrapper.hidden")
+const hiddenDialogWrapper = document.querySelector(".hidden-dialog-wrapper");
   
+
+const hiddenDivTwo = document.querySelector(".hidden-div-two");
+
+
+let flexibleColumnOne = document.querySelector(".flexible-column");
+let flexibleColumnTwo = document.querySelector(".flexible-column .two");
+let mainSection = document.querySelector("main"); 
+
 
 
 /* Functions */ 
 function revealButton() {
-    if ( firstHiddenButton.classList.contains("reveal")) {
-        hiddenDiv.classList.remove("reveal"); 
-    }
-    else {
+   
         hiddenDiv.classList.add("reveal");
          button_one.classList.add("hidden");
-    }
+    
 } 
 
-function revealDialog () {
-    if (dialogWrapper.contains("hidden")) {
-        dialogWrapper.remove("hidden"); 
-    }
-    else {
-        dialogWrapper.remove("hidden");
-    }
 
+function revealDialog()  {
+   
+        hiddenDialogWrapper.classList.add("reveal");
+    
 }
+
+console.log(revealDialog());
 
 /* End of functions */ 
 
@@ -72,9 +76,16 @@ firstHiddenButton.addEventListener('click', function (event) {
     clickCounter++ 
 
     if (clickCounter === 4 ) {
-        sectionOne.classList.add("hidden");
+        // sectionOne.classList.add("hidden");
 
-        revealDialog(); 
+        flexibleColumnOne.style.background ="black"; 
+       // flexibleColumnOne.style.background ="white"; 
+        mainSection.style.background = "black"; 
+
+        revealDialog();
+
+       // hiddenDivTwo.classList.add("reveal");
+        
     }
 
 }) 
