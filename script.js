@@ -45,10 +45,12 @@ const hiddenDivTwo = document.querySelector(".hidden-div-two");
 
 let flexibleColumnOne = document.querySelector(".flexible-column-one");
 let flexibleColumnTwo = document.querySelector(".flexible-column-two");
-let mainSection = document.querySelector("main"); 
+let mainSection = document.querySelector(".main"); 
 
 
 const arrow = document.querySelector(".arrow");
+
+const sectionTwo = document.querySelector(".section-two");
 
 /* Functions */ 
 function revealFirstHiddenButton() {
@@ -95,9 +97,14 @@ firstHiddenButton.addEventListener('click', function (event) {
        // hiddenDivTwo.classList.add("reveal");
         console.log(clickCounter); 
     }
-
 }) 
 
+
+document.addEventListener('scroll', function() {
+
+    sectionTwo.classList.add("reveal");
+    console.log(sectionTwo);
+})
 
 
 /* Verkar inte fungera med reveal av dialog */ 
