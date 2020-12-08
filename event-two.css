@@ -5,14 +5,8 @@
 
 .hidden-dialog-wrapper.reveal {
     display: block;
-    
-    /* background: whitesmoke; 
-    height: 9rem;
-    width: 16rem; 
    
     margin: 15rem;
-    border-radius: 1rem;
-  */ 
   position: absolute;
   width: 25rem;
   height: 7rem;
