@@ -1,3 +1,5 @@
+/* Variables */ 
+
 const button_one = document.querySelector(".button-one"); 
 
 let clickCounter = 0; 
@@ -24,19 +26,39 @@ const arrow = document.querySelector(".arrow");
 let sectionTwo = document.querySelector(".section-two");
 
 
+const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two")
+
+/* Arrays */ 
 const quotes = ['Great job..you turned the lights off. Now what?', 
                 'Ha! try to find it now',
                 'Okey..but seriously. Do NOT click now.' 
  ]; 
 
-const buttons = [
+const buttonsnotUsed = [
     { name: 'button1', color: '#5A5A5A'},
     { name: 'button2', color: '#5A5A5A'},
     { name: 'button3', color: '#5A5A5A'},
     { name: 'button4', color: '#5A5A5A'},
     { name: 'button5', color: '#D51C1C'},
     { name: 'button6', color: '#5A5A5A'},
+    { name: 'button7', color: '#5A5A5A'},
+    { name: 'button8', color: '#5A5A5A'},
+    { name: 'button9', color: '#5A5A5A'},
+    { name: 'button10', color: '#5A5A5A'},
+    { name: 'button11', color: '#5A5A5A'},
+    { name: 'button12', color: '#5A5A5A'},
+    { name: 'button13', color: '#5A5A5A'},
+    { name: 'button14', color: '#5A5A5A'},
+    { name: 'button15', color: '#5A5A5A'},
+    { name: 'button16', color: '#5A5A5A'},
 ];
+
+/* End of arrays */ 
+
+
+
+/* Functions */ 
+
 
 // Creates an HTML element from string
 const stringToHTML = (str) => {
@@ -68,14 +90,12 @@ button_one.addEventListener('click', function (event) {
 
 } 
 
-console.log(clickCounter); 
 
 })
 
 /* Function for hiding first button and revealing a second one */ 
 
 
-/* Functions */ 
 function revealFirstHiddenButton() {
 
         hiddenDiv.classList.add("reveal");
@@ -87,13 +107,19 @@ function hideFirstHiddenButton()  {
     hiddenDiv.classList.remove("reveal");
 }
 
-function revealDialog()  {
-   
+function revealFirstDialog()  {
+  
         hiddenDialogWrapper.classList.add("reveal");
 
         generateText(); 
        
 }
+
+function revealSecondDialog() {
+    dialogWrapperTwo.classList.add("reveal");
+    generateText(); 
+}
+
 
 function hideDialog() {
     hiddenDialogWrapper.classList.remove("reveal");
@@ -111,24 +137,29 @@ quotes.forEach((item) => {
 });
 }; 
 
+/* GenerateText function, needs to be fixed!! doesnt append to second wrapper. how to fix?
+
 /* Use for creating more dialog frames? 
 const createDivDialog = (div) => {
     return `<div class="hidden-dialog-wrapper"> </div>  `
 }
+
+
  */ 
 
  const buttonContainer = document.querySelector(".button-container")
 
- const createButton = (name, color) => {
-     return `<button class="buttons" data-color=${color}> ${name} </button> `
+ const createButton = (button) => {
+     return `<button class="buttons_item .${i}"> ${i} </button> `
  }
 
- const generateButtons = () => {
+
+ /* const generateButtons = () => {
      buttons.forEach((item) => {
          const theButtons = createButton(item.name, item.color);
         buttonContainer.appendChild(stringToHTML(theButtons));
      })
- }
+ } */ 
 /* End of functions */ 
 
 
@@ -147,7 +178,7 @@ firstHiddenButton.addEventListener('click', function (event) {
 
         hideFirstHiddenButton();
 
-        revealDialog();
+        revealFirstDialog();
 
         arrow.classList.add("reveal");
 
@@ -170,9 +201,26 @@ window.addEventListener('scroll', function() {
 
 
 if (goForButtons = true) {
-    generateButtons();
+    
+    revealSecondDialog();
+
+    for ( i = 0; i < 16; i++) {
+        const theButtons = createButton();
+        buttonContainer.appendChild(stringToHTML(theButtons));
+    }
+
 }
 
+const buttons = document.querySelectorAll(".buttons_item"); 
+
+
+
+
+buttons.forEach((button) => {
+    // const redButton = document.querySelector(".buttons_item.7");
+    // console.log(redButton);
+    console.log(button);
+})
 
 /* Verkar inte fungera med reveal av dialog */ 
     
@@ -191,3 +239,4 @@ console.log (dialog); */
 // Scrolla uoo igen när man trycker på knappen. 
 // "Seriously, don't press this button. "
 // Jump-scare
+// Ändra färger till variabler
