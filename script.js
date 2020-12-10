@@ -30,9 +30,10 @@ const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two")
 
 /* Arrays */ 
 const quotes = [
+    
      'Great job..you turned the lights off. Now what?', 
      'Ha! try to find it now',
-     'Okey..but seriously. Do NOT click now.',
+     'Okey..but seriously. Do NOT click now.' 
  ]; 
 
 const buttonsnotUsed = [
@@ -112,13 +113,12 @@ function revealFirstDialog()  {
   
         hiddenDialogWrapper.classList.add("reveal");
 
-        generateText(); 
        
 }
 
 function revealSecondDialog() {
     dialogWrapperTwo.classList.add("reveal");
-    generateText(); 
+    
 }
 
 
@@ -127,22 +127,36 @@ function hideDialog() {
 }
 
 
-const createText = (quote) => {
+function createText(quote) {
     return `<p class="reveal-dialog"> ${quote} </p> `
 }
 
-const generateText = () => {
-quotes.forEach((item, index) => {
+function generateText() {
 
-    console.log(item, index); 
-    const textDialog = createText(item, 0); 
+    for(i=0; i < quotes.length; i++ ) {
+
+
+    };
+    
+    const textDialog = createText(quotes[0]); 
+    hiddenDialogWrapper.appendChild(stringToHTML(textDialog));
+        
+    
+    const textDialogTwo = createText(quotes[1]);
+    dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo)); 
+};
+
+
+/* quotes.forEach((item, index) => {
+ 
+    const textDialog = createText(0,item); 
     hiddenDialogWrapper.appendChild(stringToHTML(textDialog));
 
 
-    const textDialogTwo = createText(item, 1);
-    dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo));
+    const textDialogTwo = createText(1,item);
+    dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo)); 
 });
-}; 
+};  */ 
 
 /* GenerateText function, needs to be fixed!! doesnt append to second wrapper. how to fix?
 
@@ -158,15 +172,10 @@ const createDivDialog = (div) => {
 
  const createButton = (button) => {
      return `<button class="buttons_item .${i}"> ${i} </button> `
- }
+ };
 
 
- /* const generateButtons = () => {
-     buttons.forEach((item) => {
-         const theButtons = createButton(item.name, item.color);
-        buttonContainer.appendChild(stringToHTML(theButtons));
-     })
- } */ 
+ 
 /* End of functions */ 
 
 
@@ -210,22 +219,21 @@ window.addEventListener('scroll', function() {
 if (goForButtons = true) {
     
    
-
     for ( i = 0; i < 16; i++) {
         const theButtons = createButton();
         buttonContainer.appendChild(stringToHTML(theButtons));
-    }
+    };
 
     revealSecondDialog();
     generateText();
-    console.log(generateText());
+    
 }
 
 const buttons = document.querySelectorAll(".buttons_item"); 
 
 console.log(buttons[2]);
 
-let redButton = buttons[7]; 
+let redButton = buttons[9]; 
 
 redButton.addEventListener("mouseover", function (event) {
     event.target.style.background = "red";
@@ -234,6 +242,9 @@ redButton.addEventListener("mouseover", function (event) {
         event.target.style.background = "";
     }, 1000); 
 }, false ); 
+
+
+
 
 
 
@@ -252,4 +263,4 @@ console.log (dialog); */
 // Scrolla uoo igen när man trycker på knappen. 
 // "Seriously, don't press this button. "
 // Jump-scare
-// Ändra färger till variabler
+// Ändra färger till variabler */ 
