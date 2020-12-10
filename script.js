@@ -213,15 +213,28 @@ if (goForButtons = true) {
 
 const buttons = document.querySelectorAll(".buttons_item"); 
 
+console.log(buttons[2]);
+
+let redButton = buttons[7]; 
+
+redButton.addEventListener("mouseover", function (event) {
+    event.target.style.background = "red";
+
+    setTimeout(function() {
+        event.target.style.background = "";
+    }, 1000); 
+}, false ); 
 
 
 
-buttons.forEach((button) => {
+/* buttons.forEach((button) => {
     // const redButton = document.querySelector(".buttons_item.7");
     // console.log(redButton);
-    console.log(button);
+    console.log(button[1]);
 })
 
+/* const redButton = document.querySelector(".buttons_item .1");
+console.log(redButton);*/ 
 /* Verkar inte fungera med reveal av dialog */ 
     
 
