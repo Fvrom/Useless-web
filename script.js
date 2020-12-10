@@ -29,9 +29,10 @@ let sectionTwo = document.querySelector(".section-two");
 const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two")
 
 /* Arrays */ 
-const quotes = ['Great job..you turned the lights off. Now what?', 
-                'Ha! try to find it now',
-                'Okey..but seriously. Do NOT click now.' 
+const quotes = [
+     'Great job..you turned the lights off. Now what?', 
+     'Ha! try to find it now',
+     'Okey..but seriously. Do NOT click now.',
  ]; 
 
 const buttonsnotUsed = [
@@ -131,9 +132,15 @@ const createText = (quote) => {
 }
 
 const generateText = () => {
-quotes.forEach((item) => {
-    const textDialog = createText(item); 
+quotes.forEach((item, index) => {
+
+    console.log(item, index); 
+    const textDialog = createText(item, 0); 
     hiddenDialogWrapper.appendChild(stringToHTML(textDialog));
+
+
+    const textDialogTwo = createText(item, 1);
+    dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo));
 });
 }; 
 
@@ -202,13 +209,16 @@ window.addEventListener('scroll', function() {
 
 if (goForButtons = true) {
     
-    revealSecondDialog();
+   
 
     for ( i = 0; i < 16; i++) {
         const theButtons = createButton();
         buttonContainer.appendChild(stringToHTML(theButtons));
     }
 
+    revealSecondDialog();
+    generateText();
+    console.log(generateText());
 }
 
 const buttons = document.querySelectorAll(".buttons_item"); 
@@ -227,16 +237,6 @@ redButton.addEventListener("mouseover", function (event) {
 
 
 
-/* buttons.forEach((button) => {
-    // const redButton = document.querySelector(".buttons_item.7");
-    // console.log(redButton);
-    console.log(button[1]);
-})
-
-/* const redButton = document.querySelector(".buttons_item .1");
-console.log(redButton);*/ 
-/* Verkar inte fungera med reveal av dialog */ 
-    
 
 /* 
 const dialog = document.createElement("p"); 

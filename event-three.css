@@ -34,14 +34,14 @@ display: none;
     font-size: 2.6rem;
     text-decoration: none;
     outline: 0;  /* removes outline when you press the button */ 
+    z-index: 2;
     
     
     }
 
 
-     .buttons_item .7 {
-        background: red; 
-    } 
+
+    
 
     .hidden-dialog-wrapper-two {
         display: none; 
