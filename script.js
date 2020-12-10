@@ -10,7 +10,7 @@ const hiddenDiv = document.querySelector(".hidden-div-one");
 
 const sectionOne = document.querySelector(".section-one");
 const hiddenSectionOne = document.querySelector(".section-one.hidden");
-const hiddenDialogWrapper = document.querySelector(".hidden-dialog-wrapper");
+const DialogWrapperOne = document.querySelector(".dialog-wrapper-one");
   
 
 const hiddenDivTwo = document.querySelector(".hidden-div-two");
@@ -28,32 +28,17 @@ let sectionTwo = document.querySelector(".section-two");
 
 const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two")
 
+
+
+
 /* Arrays */ 
 const quotes = [
-    
      'Great job..you turned the lights off. Now what?', 
      'Ha! try to find it now',
      'Okey..but seriously. Do NOT click now.' 
  ]; 
 
-const buttonsnotUsed = [
-    { name: 'button1', color: '#5A5A5A'},
-    { name: 'button2', color: '#5A5A5A'},
-    { name: 'button3', color: '#5A5A5A'},
-    { name: 'button4', color: '#5A5A5A'},
-    { name: 'button5', color: '#D51C1C'},
-    { name: 'button6', color: '#5A5A5A'},
-    { name: 'button7', color: '#5A5A5A'},
-    { name: 'button8', color: '#5A5A5A'},
-    { name: 'button9', color: '#5A5A5A'},
-    { name: 'button10', color: '#5A5A5A'},
-    { name: 'button11', color: '#5A5A5A'},
-    { name: 'button12', color: '#5A5A5A'},
-    { name: 'button13', color: '#5A5A5A'},
-    { name: 'button14', color: '#5A5A5A'},
-    { name: 'button15', color: '#5A5A5A'},
-    { name: 'button16', color: '#5A5A5A'},
-];
+
 
 /* End of arrays */ 
 
@@ -111,7 +96,7 @@ function hideFirstHiddenButton()  {
 
 function revealFirstDialog()  {
   
-        hiddenDialogWrapper.classList.add("reveal");
+        DialogWrapperOne.classList.add("reveal");
 
        
 }
@@ -123,7 +108,7 @@ function revealSecondDialog() {
 
 
 function hideDialog() {
-    hiddenDialogWrapper.classList.remove("reveal");
+    DialogWrapperOne.classList.remove("reveal");
 }
 
 
@@ -139,36 +124,21 @@ function generateText() {
     };
     
     const textDialog = createText(quotes[0]); 
-    hiddenDialogWrapper.appendChild(stringToHTML(textDialog));
+    DialogWrapperOne.appendChild(stringToHTML(textDialog));
         
     
     const textDialogTwo = createText(quotes[1]);
     dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo)); 
+
+    function updateDialog() {
+        textDialog = createText(quotes[2]);
+        DialogWrapperOne.innerHTML.appendChild(stringToHTML(textDialog));
+    }
 };
 
 
-/* quotes.forEach((item, index) => {
+
  
-    const textDialog = createText(0,item); 
-    hiddenDialogWrapper.appendChild(stringToHTML(textDialog));
-
-
-    const textDialogTwo = createText(1,item);
-    dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo)); 
-});
-};  */ 
-
-/* GenerateText function, needs to be fixed!! doesnt append to second wrapper. how to fix?
-
-/* Use for creating more dialog frames? 
-const createDivDialog = (div) => {
-    return `<div class="hidden-dialog-wrapper"> </div>  `
-}
-
-
- */ 
-
- const buttonContainer = document.querySelector(".button-container")
 
  const createButton = (button) => {
      return `<button class="buttons_item .${i}"> ${i} </button> `
@@ -176,6 +146,7 @@ const createDivDialog = (div) => {
 
 
  
+
 /* End of functions */ 
 
 
@@ -203,8 +174,9 @@ firstHiddenButton.addEventListener('click', function (event) {
        // hiddenDivTwo.classList.add("reveal");
         console.log(clickCounter); 
     }
-}) 
+}); 
 
+const buttonContainer = document.querySelector(".button-container")
 let goForbuttons = false; 
 
 window.addEventListener('scroll', function() {
@@ -227,22 +199,39 @@ if (goForButtons = true) {
     revealSecondDialog();
     generateText();
     
+
 }
 
 const buttons = document.querySelectorAll(".buttons_item"); 
 
-console.log(buttons[2]);
-
 let redButton = buttons[9]; 
+
 
 redButton.addEventListener("mouseover", function (event) {
     event.target.style.background = "red";
 
     setTimeout(function() {
         event.target.style.background = "";
-    }, 1000); 
+    }, 600); 
 }, false ); 
 
+/* const createTopLink = () => {
+    return `<a href='#top'> </a>`
+}; 
+
+const topLink = createTopLink();
+redButton.appendChild(stringToHTML(topLink));  Behövs inte länk */ 
+
+ redButton.addEventListener("click", function (event) {
+
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
+
+    sectionTwo.classList.remove("reveal"); 
+
+    updateDialog()
+
+})
 
 
 

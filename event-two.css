@@ -1,9 +1,9 @@
-.hidden-dialog-wrapper {
+.dialog-wrapper-one {
     display: none;
 }
 
 
-.hidden-dialog-wrapper.reveal {
+.dialog-wrapper-one.reveal {
     display: block;
    
     margin: 15rem;
@@ -16,10 +16,11 @@
   
   text-align: center;
   color: #000;
+  
    
 }
 
-.hidden-dialog-wrapper.reveal:before {
+.dialog-wrapper-one.reveal:before {
     content: "";
     position: absolute;
     border-right: 2.2rem solid whitesmoke;
@@ -27,12 +28,13 @@
     border-bottom: 2.2rem solid transparent;
     left: 20rem;
     bottom: -2.2rem;
+    
   }
 
 .reveal-dialog {
    
-    font-size: 2.2rem;
-    font-family: "AmaticSC-Regular";
+    font-size: 2.4rem;
+    font-family: "AmaticSC-Bold";
 }  
 
 
