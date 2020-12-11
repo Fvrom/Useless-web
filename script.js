@@ -29,13 +29,17 @@ let sectionTwo = document.querySelector(".section-two");
 const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two")
 
 
+const dialogWrapperThree = document.querySelector(".dialog-wrapper-three"); 
 
+const video = document.querySelector(".video");
+
+const lastButton = document.querySelector(".last-button"); 
 
 /* Arrays */ 
 const quotes = [
-     'Great job..you turned the lights off. Now what?', 
+     'You turned the lights off. Good job.. I mean it.', 
      'Ha! try to find it now',
-     'Okey..but seriously. Do NOT click now.' 
+     'NOO! but seriously. Do NOT click now.' 
  ]; 
 
 
@@ -97,9 +101,13 @@ function hideFirstHiddenButton()  {
 function revealFirstDialog()  {
   
         DialogWrapperOne.classList.add("reveal");
-
-       
+    
 }
+
+function hideFirstDialog() {
+    DialogWrapperOne.classList.remove("reveal");
+}
+
 
 function revealSecondDialog() {
     dialogWrapperTwo.classList.add("reveal");
@@ -107,9 +115,6 @@ function revealSecondDialog() {
 }
 
 
-function hideDialog() {
-    DialogWrapperOne.classList.remove("reveal");
-}
 
 
 function createText(quote) {
@@ -130,15 +135,14 @@ function generateText() {
     const textDialogTwo = createText(quotes[1]);
     dialogWrapperTwo.appendChild(stringToHTML(textDialogTwo)); 
 
-    function updateDialog() {
-        textDialog = createText(quotes[2]);
-        DialogWrapperOne.innerHTML.appendChild(stringToHTML(textDialog));
-    }
+    
+    const textDialogThree = createText(quotes[2]);
+    dialogWrapperThree.appendChild(stringToHTML(textDialogThree)); 
+
 };
 
 
 
- 
 
  const createButton = (button) => {
      return `<button class="buttons_item .${i}"> ${i} </button> `
@@ -229,10 +233,25 @@ redButton.appendChild(stringToHTML(topLink));  Behövs inte länk */
 
     sectionTwo.classList.remove("reveal"); 
 
-    updateDialog()
+    // updateDialog()
+
+    hideFirstDialog();
+
+   dialogWrapperThree.classList.add("reveal");
+    
+   lastButton.classList.add("reveal");
+   console.log(lastButton)
 
 })
 
+lastButton.addEventListener("click", function () {
+
+   
+
+       video.classList.add("reveal");
+   
+
+});
 
 
 

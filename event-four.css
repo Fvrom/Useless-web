@@ -1,0 +1,63 @@
+
+.dialog-wrapper-three {
+    display: none;
+}
+
+
+.dialog-wrapper-three.reveal {
+    display: block;
+   
+    margin: 15rem;
+  position: absolute;
+  width: 25rem;
+  height: 7rem;
+  background: whitesmoke;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  
+  text-align: center;
+  color: #000;
+  
+   
+}
+
+.dialog-wrapper-three.reveal:before {
+    content: "";
+    position: absolute;
+    border-right: 2.2rem solid whitesmoke;
+    border-top: 1rem solid whitesmoke;
+    border-bottom: 2.2rem solid transparent;
+    left: 20rem;
+    bottom: -2.2rem;
+    
+  }
+
+  /*
+  .video {
+    display: none;
+  }
+
+  .video.reveal {
+      position: absolute; 
+} */ 
+
+.last-button {
+    display: none;
+}
+
+.last-button.reveal {
+    display: block;
+    align-self: center;
+    z-index: 3;
+    height: 16rem;
+    width: 16rem;
+    border-radius: 50%;
+    font-family: AmaticSC-Bold;
+    font-size: 2.6rem;
+    text-decoration: none;
+    outline: 0;  /* removes outline when you press the button */ 
+    text-align: center;
+    background: rgb(218, 40, 40); 
+    border: 2px solid #b12222;
+    box-shadow: 2px 2px 5px rgb(39, 39, 39);
+}
