@@ -10,12 +10,12 @@
   position: absolute;
   width: 25rem;
   height: 7rem;
-  background: whitesmoke;
+  background: var(--color-white-smoke);
   border-radius: 1.5rem;
   padding: 1rem;
   
   text-align: center;
-  color: #000;
+  color: var(--color-black);
   
    
 }
@@ -23,8 +23,8 @@
 .dialog-wrapper-one.reveal:before {
     content: "";
     position: absolute;
-    border-right: 2.2rem solid whitesmoke;
-    border-top: 1rem solid whitesmoke;
+    border-right: 2.2rem solid var(--color-white-smoke);
+    border-top: 1rem solid var(--color-white-smoke);
     border-bottom: 2.2rem solid transparent;
     left: 20rem;
     bottom: -2.2rem;
@@ -50,14 +50,14 @@
     height: 12rem;
     width: 12rem;
     border-radius: 50%;
-    font-family: AmaticSC-Bold;
+    font-family: "AmaticSC-Bold";
     font-size: 2.6rem;
     text-decoration: none;
     outline: 0;  /* removes outline when you press the button */ 
 
-    background: rgb(218, 40, 40); 
-    border: 2px solid #b12222;
-    box-shadow: 2px 2px 5px rgb(39, 39, 39);
+    background: var(--color-red-button); 
+    border: 2px solid var(--color-red-border);
+    box-shadow: 2px 2px 5px var(--color-shadow);
 
     
 }
@@ -97,8 +97,8 @@
    position: absolute;
    bottom: 0;
   border: 1rem solid transparent;
-  border-left: 1rem solid white;
-  border-top: 1rem solid white;
+  border-left: 1rem solid var(--color-white);
+  border-top: 1rem solid var(--color-white);
   transform: rotate(0.63turn);
   animation: 4s ease-in;
 }

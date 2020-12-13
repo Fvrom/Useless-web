@@ -16,7 +16,7 @@
   padding: 1rem;
   
   text-align: center;
-  color: #000;
+  color: var(--color-black);
   
    
 }
@@ -32,14 +32,21 @@
     
   }
 
-  /*
-  .video {
+  
+  .video-wrapper {
     display: none;
-  }
+  } 
 
-  .video.reveal {
-      position: absolute; 
-} */ 
+  .video-wrapper.reveal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: var(--color-black);
+      z-index: 5;
+      width: 40rem;
+      height: 100vh;
+} 
 
 .last-button {
     display: none;
@@ -57,7 +64,7 @@
     text-decoration: none;
     outline: 0;  /* removes outline when you press the button */ 
     text-align: center;
-    background: rgb(218, 40, 40); 
-    border: 2px solid #b12222;
-    box-shadow: 2px 2px 5px rgb(39, 39, 39);
+    background: var(--color-red-button); 
+    border: 2px solid var(--color-red-border);
+    box-shadow: 2px 2px 5px var(--color-shadow);
 }

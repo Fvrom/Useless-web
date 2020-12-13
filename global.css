@@ -1,5 +1,14 @@
 :root {
     font-size: 10px; 
+    --color-red-button: #da2828;
+    --color-red-border: #b12222; 
+    --color-black: #050505;
+    --color-grey-button: #5A5A5A;
+    --color-white-smoke: #f5f5f5;
+    --color-white: #ffffff;
+    --color-shadow: #262626; 
+
+    --font-family: "AmaticSC-Regular", Arial; 
 }
 
 

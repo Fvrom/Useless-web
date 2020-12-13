@@ -20,9 +20,9 @@
     <sectionclass="section"> 
        
 
-    <div class="section-one"> <!-- Hides everything when function is called for it-->
+    <div class="section-one">
 
-                <div class="flexible-column-one"> 
+                <div class="flexible-column-one" role="flexible column"> 
                     <div class="hidden-div-one">
 
                          <button class="reveal-first-hidden-button"> I mean it.. </button>
@@ -33,9 +33,13 @@
         <main class="main">
 
             <button aria-label="Don't press this button" class="button-one"> Don't press this button </button>
-            <button class="last-button"> Don't.Do.It.</button>
-             <div class="video"> 
-                </div> 
+            <button class="last-button" aria-label="Do not press. Dont. Do. It. "> Don't.Do.It.</button>
+           
+           
+            <div class="video-wrapper" role="video wrapper">
+             <video loop class="video" src="/video/video.mp4" onmouseover="play(this,true)"></video> 
+            </div>
+                
             <div class="dialog-wrapper-one">  
                 <!-- <p class="reveal-dialog"> Great job..you turned the lights off. Now what? </p> --> 
              </div> <!-- Going to show up when everything gets dark-->
@@ -43,12 +47,12 @@
              <div class=dialog-wrapper-three> </div>
 
 
-           <div class="arrow"> </div>
+           <div class="arrow" role="scroll down indicator"> </div>
 
              
         </main>
 
-        <div class="flexible-column-two"> 
+        <div class="flexible-column-two" role="flexible column"> 
         </div>
 
      

@@ -31,7 +31,7 @@ const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two")
 
 const dialogWrapperThree = document.querySelector(".dialog-wrapper-three"); 
 
-const video = document.querySelector(".video");
+const video = document.querySelector(".video-wrapper");
 
 const lastButton = document.querySelector(".last-button"); 
 
@@ -39,9 +39,8 @@ const lastButton = document.querySelector(".last-button");
 const quotes = [
      'You turned the lights off. Good job.. I mean it.', 
      'Ha! try to find it now',
-     'NOO! but seriously. Do NOT click now.' 
+     'NOO! Seriously. Do NOT click now.' 
  ]; 
-
 
 
 /* End of arrays */ 
@@ -250,7 +249,10 @@ lastButton.addEventListener("click", function () {
 
        video.classList.add("reveal");
    
+       lastButton.classList.remove("reveal");
+       dialogWrapperThree.classList.remove("reveal");
 
+       console.log(video);
 });
 
 
