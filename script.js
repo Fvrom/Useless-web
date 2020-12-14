@@ -152,7 +152,8 @@ if ((goForButtons = true)) {
 /* Make one button turn red when you hover over it */
 const buttons = document.querySelectorAll(".buttons_item");
 
-let redButton = buttons[9];
+/* random red button */
+let redButton = buttons[Math.floor(Math.random() * 15)];
 
 redButton.addEventListener(
   "mouseover",
@@ -189,5 +190,3 @@ lastButton.addEventListener("click", function () {
   lastButton.classList.remove("reveal");
   dialogWrapperThree.classList.remove("reveal");
 });
-
-
