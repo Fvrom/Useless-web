@@ -35,6 +35,8 @@ const video = document.querySelector(".video-wrapper");
 
 const lastButton = document.querySelector(".last-button"); 
 
+const buttonContainer = document.querySelector(".button-container")
+
 /* Arrays */ 
 const quotes = [
      'You turned the lights off. Good job.. I mean it.', 
@@ -83,9 +85,8 @@ button_one.addEventListener('click', function (event) {
 
 })
 
+
 /* Function for hiding first button and revealing a second one */ 
-
-
 function revealFirstHiddenButton() {
 
         hiddenDiv.classList.add("reveal");
@@ -93,10 +94,12 @@ function revealFirstHiddenButton() {
      
 } 
 
+
 function hideFirstHiddenButton()  {
     hiddenDiv.classList.remove("reveal");
 }
 
+/* reveal dialog */ 
 function revealFirstDialog()  {
   
         DialogWrapperOne.classList.add("reveal");
@@ -107,14 +110,14 @@ function hideFirstDialog() {
     DialogWrapperOne.classList.remove("reveal");
 }
 
-
+/* Second dialog */ 
 function revealSecondDialog() {
     dialogWrapperTwo.classList.add("reveal");
     
 }
 
 
-
+/* Create dialog text */ 
 
 function createText(quote) {
     return `<p class="reveal-dialog"> ${quote} </p> `
@@ -150,7 +153,7 @@ function generateText() {
 
  
 
-/* End of functions */ 
+
 
 
 
@@ -160,8 +163,8 @@ firstHiddenButton.addEventListener('click', function (event) {
     clickCounter++ 
 
     if (clickCounter === 4 ) {
-        // sectionOne.classList.add("hidden");
-
+        
+        /* changes background to black as website turns dark */ 
         flexibleColumnOne.style.background = "black"; 
         flexibleColumnTwo.style.background = "black"; 
         mainSection.style.background = "black"; 
@@ -172,14 +175,14 @@ firstHiddenButton.addEventListener('click', function (event) {
 
         arrow.classList.add("reveal");
 
-
+        /* reveals a second section when you scroll down */ 
         sectionTwo.classList.add("reveal"); 
-       // hiddenDivTwo.classList.add("reveal");
-        console.log(clickCounter); 
+       
     }
 }); 
 
-const buttonContainer = document.querySelector(".button-container")
+
+
 let goForbuttons = false; 
 
 window.addEventListener('scroll', function() {
@@ -190,7 +193,8 @@ window.addEventListener('scroll', function() {
     let goForButtons = true; 
 })
 
-
+/* goForButtons will turn true when you start scrolling, when it is true 
+buttons will be created in second section */ 
 if (goForButtons = true) {
     
    
@@ -205,6 +209,7 @@ if (goForButtons = true) {
 
 }
 
+/* Make one button turn red when you hover over it */
 const buttons = document.querySelectorAll(".buttons_item"); 
 
 let redButton = buttons[9]; 
@@ -218,12 +223,8 @@ redButton.addEventListener("mouseover", function (event) {
     }, 600); 
 }, false ); 
 
-/* const createTopLink = () => {
-    return `<a href='#top'> </a>`
-}; 
 
-const topLink = createTopLink();
-redButton.appendChild(stringToHTML(topLink));  Behövs inte länk */ 
+/* Function for when you click the red button */ 
 
  redButton.addEventListener("click", function (event) {
 
@@ -231,8 +232,6 @@ redButton.appendChild(stringToHTML(topLink));  Behövs inte länk */
     document.documentElement.scrollTop = 0;
 
     sectionTwo.classList.remove("reveal"); 
-
-    // updateDialog()
 
     hideFirstDialog();
 
@@ -243,6 +242,7 @@ redButton.appendChild(stringToHTML(topLink));  Behövs inte länk */
 
 })
 
+/* The last button,when clicked reveals a video*/ 
 lastButton.addEventListener("click", function () {
 
    
@@ -252,25 +252,15 @@ lastButton.addEventListener("click", function () {
        lastButton.classList.remove("reveal");
        dialogWrapperThree.classList.remove("reveal");
 
-       console.log(video);
 });
 
 
 
 
 
-/* 
-const dialog = document.createElement("p"); 
-dialog.innerHTML = "NoOoo! Turn the lights back on!" ; 
-document.dialogWrapper.appendChild(dialog); 
-console.log (dialog); */ 
 
 
-// Funktion gömma knapp, reveal en annan knapp.
-// "släcka ljuset", reveal hide section-one black background? 
-// Scroll funktion
-// Gömma knappen bland massa cirklar. 
-// Scrolla uoo igen när man trycker på knappen. 
-// "Seriously, don't press this button. "
-// Jump-scare
-// Ändra färger till variabler */ 
+// Slutspurten!!
+// Checka AAA , validera koden.
+// se om margin kan ändras för mobile. sista knappen/videon
+// Se om det finns onödig kod! 

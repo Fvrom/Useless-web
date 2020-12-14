@@ -39,29 +39,6 @@
 
 
 
-
-
-
-
-/* NOT USING THIS AT THE MOMENT */ 
-
-.reveal-second-hidden-button {
-    margin: 4.5rem;
-    height: 12rem;
-    width: 12rem;
-    border-radius: 50%;
-    font-family: "AmaticSC-Bold";
-    font-size: 2.6rem;
-    text-decoration: none;
-    outline: 0;  /* removes outline when you press the button */ 
-
-    background: var(--color-red-button); 
-    border: 2px solid var(--color-red-border);
-    box-shadow: 2px 2px 5px var(--color-shadow);
-
-    
-}
-
 .hidden-div-two {
     display: none; 
 }
