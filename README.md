@@ -5,5 +5,5 @@ School assignment built using HTML, CSS and Javascript.
 Open the website [here](https://dontpress.netlify.app/)
 
 ## Testers 
-* 
-*
+* Mark M.
+* Lucas N.
