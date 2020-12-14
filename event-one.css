@@ -1,49 +1,42 @@
 .button-one {
-    align-self: center;
-    height: 16rem;
-    width: 16rem;
-    border-radius: 50%;
-    font-family: AmaticSC-Bold;
-    font-size: 2.6rem;
-    text-decoration: none;
-    outline: 0;  /* removes outline when you press the button */ 
+  align-self: center;
+  height: 16rem;
+  width: 16rem;
+  border-radius: 50%;
+  font-family: AmaticSC-Bold;
+  font-size: 2.6rem;
+  text-decoration: none;
+  outline: 0; /* removes outline when you press the button */
 
-    background: var(--color-red-button); 
-    border: 2px solid var(--color-red-border);
-    box-shadow: 2px 2px 5px var(--color-shadow);
-  
+  background: var(--color-red-button);
+  border: 2px solid var(--color-red-border);
+  box-shadow: 2px 2px 5px var(--color-shadow);
 }
 
 .button-one.hidden {
-   
-    display: none;
+  display: none;
 }
 
-
-/* Reveals the second button after first buttan has been pressed */ 
+/* Reveals the second button after first buttan has been pressed */
 .reveal-first-hidden-button {
-    margin: 4.5rem;
-    height: 12rem;
-    width: 12rem;
-    border-radius: 50%;
-    font-family: AmaticSC-Bold;
-    font-size: 2.6rem;
-    text-decoration: none;
-    outline: 0;  /* removes outline when you press the button */ 
+  margin: 4.5rem;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  font-family: AmaticSC-Bold;
+  font-size: 2.6rem;
+  text-decoration: none;
+  outline: 0; /* removes outline when you press the button */
 
-    background: var(--color-red-button); 
-    border: 2px solid var(--color-red-border);
-    box-shadow: 2px 2px 5px var(--color-shadow);
-
-    
+  background: var(--color-red-button);
+  border: 2px solid var(--color-red-border);
+  box-shadow: 2px 2px 5px var(--color-shadow);
 }
 
 .hidden-div-one {
-    display: none; 
+  display: none;
 }
 
 .hidden-div-one.reveal {
-    display: block; 
+  display: block;
 }
-
-

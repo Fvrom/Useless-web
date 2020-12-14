@@ -1,77 +1,65 @@
 .section-two {
-display: none;
+  display: none;
 }
 
-.section-two.reveal{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    background: var(--color-black);
+.section-two.reveal {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: var(--color-black);
 
-    animation: arrow 3s ease-in
-    }
-
-
+  animation: arrow 3s ease-in;
+}
 
 .button-container {
-    width: calc(100%-40rem);
-    
-    margin: 15rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: calc(100%-40rem);
+
+  margin: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-    .buttons_item {
-    background: var(--color-grey-button);
-    border: none;
-    margin: 2rem;
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-    font-family: "AmaticSC-Bold";
-    font-size: 2.6rem;
-    text-decoration: none;
-    outline: 0;  /* removes outline when you press the button */ 
-    z-index: 2;
-    
-    
-    }
+.buttons_item {
+  background: var(--color-grey-button);
+  border: none;
+  margin: 2rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  font-family: "AmaticSC-Bold";
+  font-size: 2.6rem;
+  text-decoration: none;
+  outline: 0; /* removes outline when you press the button */
+  z-index: 2;
+}
 
+.hidden-dialog-wrapper-two {
+  display: none;
+}
 
+.dialog-wrapper-two.reveal {
+  display: block;
 
-    .hidden-dialog-wrapper-two {
-        display: none; 
-    }
+  margin: 1rem;
+  position: absolute;
+  width: 25rem;
+  height: 7rem;
+  background: var(--color-white-smoke);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-black);
+}
 
-    
-    .dialog-wrapper-two.reveal {
-        display: block;
-        
-        margin: 1rem;
-      position: absolute;
-      width: 25rem;
-      height: 7rem;
-      background: var(--color-white-smoke);
-      border-radius: 1.5rem;
-      padding: 1rem;
-      z-index: 2;
-      text-align: center;
-      color: var(--color-black);
-       
-    }
-
-    .dialog-wrapper-two.reveal:before {
-        content: "";
-        position: absolute;
-        border-right: 2.2rem solid var(--color-white-smoke);
-        border-top: 1rem solid var(--color-white-smoke);
-        border-bottom: 2.2rem solid transparent;
-        left: 20rem;
-        bottom: -2.2rem;
-      }
-    
-    
-    
-    
+.dialog-wrapper-two.reveal:before {
+  content: "";
+  position: absolute;
+  border-right: 2.2rem solid var(--color-white-smoke);
+  border-top: 1rem solid var(--color-white-smoke);
+  border-bottom: 2.2rem solid transparent;
+  left: 20rem;
+  bottom: -2.2rem;
+}
