@@ -132,7 +132,6 @@ let goForbuttons = false;
 
 window.addEventListener("scroll", function () {
   arrow.classList.remove("reveal");
-  console.log("scroll");
 
   let goForButtons = true;
 });
