@@ -25,7 +25,8 @@ const dialogWrapperTwo = document.querySelector(".dialog-wrapper-two");
 
 const dialogWrapperThree = document.querySelector(".dialog-wrapper-three");
 
-const video = document.querySelector(".video-wrapper");
+const videoWrapper = document.querySelector(".video-wrapper");
+const video = document.querySelector(".video");
 
 const lastButton = document.querySelector(".last-button");
 
@@ -184,8 +185,9 @@ redButton.addEventListener("click", function (event) {
 
 /* The last button,when clicked reveals a video*/
 lastButton.addEventListener("click", function () {
-  video.classList.add("reveal");
-
+  videoWrapper.classList.add("reveal");
+  video.autoplay = true;
+  video.load();
   lastButton.classList.remove("reveal");
   dialogWrapperThree.classList.remove("reveal");
 });
