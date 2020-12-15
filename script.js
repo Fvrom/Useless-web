@@ -140,7 +140,7 @@ window.addEventListener("scroll", function () {
 /* goForButtons will turn true when you start scrolling, when it is true 
 buttons will be created in second section */
 if ((goForButtons = true)) {
-  for (i = 0; i < 16; i++) {
+  for (i = 0; i < 15; i++) {
     const theButtons = createButton();
     buttonContainer.appendChild(stringToHTML(theButtons));
   }
@@ -153,7 +153,10 @@ if ((goForButtons = true)) {
 const buttons = document.querySelectorAll(".buttons_item");
 
 /* random red button */
-let redButton = buttons[Math.floor(Math.random() * 15)];
+let redButton =
+  buttons[
+    Math.floor(Math.random() * 15)
+  ]; /* Returns a random number between 0 to 15 */
 
 redButton.addEventListener(
   "mouseover",
