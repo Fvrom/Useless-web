@@ -189,7 +189,7 @@ redButton.addEventListener("click", function (event) {
 lastButton.addEventListener("click", function () {
   videoWrapper.classList.add("reveal");
   video.autoplay = true;
-  video.load();
+  // video.load();
   lastButton.classList.remove("reveal");
   dialogWrapperThree.classList.remove("reveal");
 });
