@@ -183,7 +183,6 @@ redButton.addEventListener("click", function (event) {
   dialogWrapperThree.classList.add("reveal");
 
   lastButton.classList.add("reveal");
-  console.log(lastButton);
 });
 
 /* The last button,when clicked reveals a video*/
